@@ -12,3 +12,12 @@
 (gl.init)
 
 
+(fn window_resize_callback [_ width height]
+  "Window resize callback function."
+  (print "window resized to (" width "," height ")")
+  (gl.viewport 0 0 width height))
+
+(glfw.set_window_size_callback window window_resize_callback)
+
+(while (glfw.window_should_close window)
+  (progn ))
