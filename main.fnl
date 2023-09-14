@@ -19,5 +19,8 @@
 
 (glfw.set_window_size_callback window window_resize_callback)
 
-(while (glfw.window_should_close window)
-  (print ("hi")))
+(while (not (glfw.window_should_close window))
+  (glfw.poll_events)
+  (gl.clear_color 1.0 0.5 0.2 1.0)
+  (gl.clear :color :depth)
+  (glfw.swap_buffers window))
