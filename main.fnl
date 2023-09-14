@@ -20,4 +20,4 @@
 (glfw.set_window_size_callback window window_resize_callback)
 
 (while (glfw.window_should_close window)
-  (progn ))
+  (print ("hi")))
